@@ -20,7 +20,7 @@ connect();
 app.use(express.json())
 
 const entriesRouter = require('./routes/entriesRouter')
-app.use('/entries', entriesRouter)
+app.use('/', entriesRouter)
 
 app.listen(
     process.env.PORT,
