@@ -20,10 +20,12 @@ connect();
 app.use(express.json())
 
 const entriesRouter = require('./routes/entriesRouter')
-app.use('/', entriesRouter)
+app.use('/entries', entriesRouter)
 
 app.listen(
     process.env.PORT,
     () => console.log(`Running live on http://localhost:${process.env.PORT}`)
 )
+
+
 
